@@ -9,12 +9,12 @@ void sendQuery(int k, int start, int end) {
     }
     
     cout << query << endl;
-    fflush(NULL);
+    cout.flush();
 }
 
 void sendResult(int result) {
-    cout << string("!") + ' ' + to_string(result);
-    fflush(NULL);
+    cout << string("!") + ' ' + to_string(result) << endl;
+    cout.flush();
 }
 
 bool PilesSumDiffer(vector<int>& piles, int start, int end) {
@@ -45,16 +45,15 @@ int main() {
 
         int start = 0, end = piles.size() - 1, mid;
         while(start <= end) {
-            mid = (start + end)/2;
+            mid = (start + end + 1)/2;
             if (PilesSumDiffer(piles, start, mid)) {
-                end = mid;
+                end = mid - 1;
             } else {
                 start = mid + 1;
             }
         }
 
         sendResult(start + 1);
-
     }
     
     return 0;
