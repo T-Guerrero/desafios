@@ -8,3 +8,4 @@ Repository dedicated to the discipline MAC0327 - Desafios de Programação - fro
 
 * **Lista 0:** Problemas introdutórios
 * **Lista 1:** Busca Binária
+* **Lista 3:** Teoria dos Números
